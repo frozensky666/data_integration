@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import "./assets/css/normalize.css"
+import "./assets/css/common.css"
+
+/* Plugins */
+import "./plugins/echarts"
+import "./plugins/elementui"
 
 Vue.config.productionTip = false
 
