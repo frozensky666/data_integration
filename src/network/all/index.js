@@ -1,0 +1,33 @@
+import request from "@/network/request";
+const API = require("@/apis"); //此处务必使用require导入（因为是module.exports导出的...）
+
+export const USER_PURCHASE_AMOUNT_DAILY = config => request._get(API.USER_PURCHASE_AMOUNT_DAILY,config);
+export const USER_ORDER_AMOUNT_DAILY = config => request._get(API.USER_ORDER_AMOUNT_DAILY,config);
+export const PROVINCE_PURCHASE_AMOUNT = config => request._get(API.PROVINCE_PURCHASE_AMOUNT,config);
+export const PROVINCE_ORDER_AMOUNT = config => request._get(API.PROVINCE_ORDER_AMOUNT,config);
+export const ITEMS_MOST_PURCHASED_PROVINCE = config => request._get(API.ITEMS_MOST_PURCHASED_PROVINCE,config);
+export const ITEMS_MOST_PURCHASED_MALE = config => request._get(API.ITEMS_MOST_PURCHASED_MALE,config);
+export const ITEMS_MOST_PURCHASED_FEMALE = config => request._get(API.ITEMS_MOST_PURCHASED_FEMALE,config);
+export const ITEMS_SALES_VOLUME_DAILY = config => request._get(API.ITEMS_SALES_VOLUME_DAILY,config);
+export const ITEMS_SALES_VOLUME = config => request._get(API.ITEMS_SALES_VOLUME,config);
+export const ITEMS_PROFIT_DAILY = config => request._get(API.ITEMS_PROFIT_DAILY,config);
+export const ITEMS_PROFIT = config => request._get(API.ITEMS_PROFIT,config);
+export const CANTEEN_ORDER_AMOUNT_MONTHLY = config => request._get(API.CANTEEN_ORDER_AMOUNT_MONTHLY,config);
+export const CANTEEN_ORDER_AMOUNT = config => request._get(API.CANTEEN_ORDER_AMOUNT,config);
+export const CANTEEN_TURNOVER_MONTHLY = config => request._get(API.CANTEEN_TURNOVER_MONTHLY,config);
+export const CANTEEN_TURNOVER = config => request._get(API.CANTEEN_TURNOVER,config);
+export const CANTEEN_ORDER_AMOUNT_MONTHLY_BY_PROVINCE = config => request._get(API.CANTEEN_ORDER_AMOUNT_MONTHLY_BY_PROVINCE,config);
+export const CANTEEN_ORDER_AMOUNT_BY_PROVINCE = config => request._get(API.CANTEEN_ORDER_AMOUNT_BY_PROVINCE,config);
+export const ORDER_CHART = config => request._get(API.ORDER_CHART,config);
+export const ACCESS_UV = config => request._get(API.ACCESS_UV,config);
+export const ACCESS_PV_DAILY = config => request._get(API.ACCESS_PV_DAILY,config);
+export const ACCESS_PV = config => request._get(API.ACCESS_PV,config);
+export const ACCESS_CART_DAILY = config => request._get(API.ACCESS_CART_DAILY,config);
+export const ACCESS_CART = config => request._get(API.ACCESS_CART,config);
+export const ACCESS_USER_DAILY = config => request._get(API.ACCESS_USER_DAILY,config);
+export const ACCESS_USER = config => request._get(API.ACCESS_USER,config);
+export const VIEW_CHART = config => request._get(API.VIEW_CHART,config);
+export const DISTRIBUTION_USER_PROVINCE = config => request._get(API.DISTRIBUTION_USER_PROVINCE,config);
+export const DISTRIBUTION_CANTEEN_PROVINCE = config => request._get(API.DISTRIBUTION_CANTEEN_PROVINCE,config);
+export const DISTRIBUTION_GENDER = config => request._get(API.DISTRIBUTION_GENDER,config);
+export const ALL_PROVINCE = config => request._get(API.ALL_PROVINCE,config);
