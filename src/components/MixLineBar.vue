@@ -43,7 +43,7 @@ export default {
   mounted() {
     this.myChart = this.$echarts.init(this.$el);
     request._get(this.url,this.config).then(resp => {
-      console.log(resp);
+      // console.log(resp);
       let dataSource = resp.data;
       let option = {
         tooltip: {

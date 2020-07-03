@@ -51,7 +51,7 @@
                         name: '姓名',
                         type: 'pie',
                         radius: '55%',
-                        center: ['40%', '50%'],
+                        center: ['50%', '50%'],
                         data: this.dataSource,
                         emphasis: {
                             itemStyle: {

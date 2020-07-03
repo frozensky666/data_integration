@@ -27,7 +27,7 @@
                 </span>
             </div>
         </div>
-        <div class="card-body">
+        <div class="card-body" v-if="list.length!==0">
             <div v-for="i in list" :key="i[1]">
                 <div class="progress">
                     <div class="progress-bar">
@@ -41,6 +41,9 @@
                     </el-tooltip>
                 </div>
             </div>
+        </div>
+        <div class="card-message" v-else>
+            {{msg}}
         </div>
     </div>
 </template>
@@ -74,7 +77,9 @@
             config: {
               type: Object,
               default(){
-                  return {}
+                  return {
+                      num: 5
+                  }
               }
             },
             title: {
@@ -95,6 +100,7 @@
                 addressOptions: [],
                 list: [],
                 maxNum: -1,
+                msg: "请稍后"
             }
         },
         methods: {
@@ -109,25 +115,41 @@
                 return m;
             },
             getList() {
+                this.msg = "请稍后";
+                this.list = [];
                 let params = deepCopy(this.config);
                 if(this.addressPicker) {
                     if(this.isEmpty(this.v2))return;
-                    Object.defineProperty(params,"address",{
+                    Object.defineProperty(params,"province",{
                         value: this.v2,
                         enumerable: true,
                     });
                 }
                 if(this.datePicker) {
                     if(this.isEmpty(this.v1))return;
-                    Object.defineProperty(params,"date",{
-                        value: this.v1,
-                        enumerable: true,
-                    });
+                    if(this.dateType === "date") {
+                        let d = new Date(this.v1);
+                        Object.defineProperty(params,"dateStr",{
+                            value: `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}`,
+                            enumerable: true,
+                        });
+                    } else if(this.dateType === "month") {
+                        let d = new Date(this.v1);
+                        Object.defineProperty(params,"year",{
+                            value: d.getFullYear(),
+                            enumerable: true,
+                        });
+                        Object.defineProperty(params,"month",{
+                            value: d.getMonth()+1,
+                            enumerable: true,
+                        });
+                    }
                 }
                 request._get(this.url,{params}).then(resp => {
                     this.list = resp.data;
                     this.maxNum = this.getMax(this.list);
                     this.list.sort((a,b)=>b[0]-a[0]);
+                    if(this.list.length===0)this.msg = "空数据"
                 });
             },
             async init() {
@@ -192,5 +214,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+    .card-message {
+        color: #757175;
+        margin-top: 20px;
     }
 </style>

@@ -3,8 +3,8 @@ const TEST_POST = "/api/test/post";
 
 const USER_PURCHASE_AMOUNT_DAILY = "/user/purchaseAmountDaily"; //用户按日购买金额排名
 const USER_ORDER_AMOUNT_DAILY = "/user/orderAmountDaily"; //用户按日订单订单量排名
-const PROVINCE_PURCHASE_AMOUNT = "/province/purchaseAmountDaily"; //省份订单总量排名
-const PROVINCE_ORDER_AMOUNT = "/province/orderAmountDaily"; //省份总金额排名
+const PROVINCE_PURCHASE_AMOUNT = "/province/purchaseAmount"; //省份总金额排名
+const PROVINCE_ORDER_AMOUNT = "/province/orderAmount"; //省份订单总量排名
 const ITEMS_MOST_PURCHASED_PROVINCE = "/items/mostPurchased/province"; //每个省份购买最多的商品排名
 const ITEMS_MOST_PURCHASED_MALE = "/items/mostPurchased/male"; //男性购买最多的商品排名
 const ITEMS_MOST_PURCHASED_FEMALE = "/items/mostPurchased/female"; //女性购买最多的商品排名
@@ -15,11 +15,11 @@ const ITEMS_PROFIT_DAILY = "/items/profitDaily"; //商品日利润排名
 const ITEMS_PROFIT = "/items/profit"; //商品总利润排名
 
 const CANTEEN_ORDER_AMOUNT_MONTHLY = "/canteen/orderAmountMonthly"; //餐厅按月订单量排名
-const CANTEEN_ORDER_AMOUNT = "/canteen/orderAmount"; //餐厅总订单量排名
+const CANTEEN_ORDER_AMOUNT = "/canteen/orderAmount"; //餐厅按总订单量排名
 const CANTEEN_TURNOVER_MONTHLY = "/canteen/turnoverMonthly"; //餐厅按月营业额排名
-const CANTEEN_TURNOVER = "/canteen/turnover"; //餐厅总营业额排名
+const CANTEEN_TURNOVER = "/canteen/turnover"; //餐厅按总营业额排名
 const CANTEEN_ORDER_AMOUNT_MONTHLY_BY_PROVINCE = "/canteen/orderAmountMonthlyByProvince"; //每个省份内餐厅按月订单量排名
-const CANTEEN_ORDER_AMOUNT_BY_PROVINCE = "/canteen/orderAmountByProvince"; //每个省份内餐厅总订单量排名
+const CANTEEN_ORDER_AMOUNT_BY_PROVINCE = "/canteen/orderAmountByProvince"; //每个省份内餐厅按总订单量排名
 
 const ORDER_CHART = "/orderChart"; //订单柱状图
 

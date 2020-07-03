@@ -23,7 +23,7 @@
       <RankCard :url="API.CANTEEN_ORDER_AMOUNT" title="餐厅总订单量排名"></RankCard>
       <RankCard :date-picker="true" :url="API.CANTEEN_TURNOVER_MONTHLY" title="餐厅按月营业额排名" date-type="month"></RankCard>
       <RankCard :url="API.CANTEEN_TURNOVER" title="餐厅总营业额排名"></RankCard>
-      <RankCard :address-picker="true" :date-picker="true" :url="API.CANTEEN_ORDER_AMOUNT_MONTHLY_BY_PROVINCE" title="每个省份内餐厅按月订单量排名"></RankCard>
+      <RankCard :address-picker="true" :date-picker="true" :url="API.CANTEEN_ORDER_AMOUNT_MONTHLY_BY_PROVINCE" title="每个省份内餐厅按月订单量排名" date-type="month"></RankCard>
       <RankCard :address-picker="true" :date-picker="true" :url="API.CANTEEN_ORDER_AMOUNT_BY_PROVINCE" title="每个省份内餐厅总订单量排名"></RankCard>
     </div>
     <div>
@@ -71,7 +71,8 @@
       return {
         v1:null,
         v2:null,
-        API: API
+        API: API,
+        num: 5
       }
     }
   }
